@@ -102,7 +102,7 @@ a:hover {
     color: var(--color-crimson);
     text-decoration: none; /* Remove underline */
     font-size: 1.6rem; /* Increase font size for readability */
-    font-weight: 500; /* Slightly bold */
+    font-weight: bold; /* Slightly bold */
     padding: 0.5rem 1rem; /* Add padding for a clickable area */
     border-radius: 4px; /* Rounded corners for hover effect */
     transition: color var(--transition-speed), background-color var(--transition-speed);
@@ -152,6 +152,7 @@ a:hover {
   
   .hero h2 {
     font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
     color: #DC143C; /* Explicitly set text color to white */
   }
@@ -220,6 +221,7 @@ a:hover {
     background: #1F1F1F;
     position: relative;
     padding: 1rem 1rem;
+    text-align: center;
 }
 
 .project-highlight h3 {
@@ -234,22 +236,38 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-/* BUTTONS */
+/* Center the Button */
 .cta-button {
     display: inline-block;
-    background: #DC143C;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.4rem;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    margin: 2rem auto; /* Center the button horizontally with auto margins */
+    text-align: center; /* Align text inside the button */
+    background: linear-gradient(135deg, #dc143c, #ff4d6d); /* Add a gradient */
+    color: #fff; /* Button text color */
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    padding: 1rem 2rem; /* Increase padding for better clickability */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: all 0.3s ease; /* Smooth hover effects */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
+/* Hover Effect */
 .cta-button:hover {
-    background: #b61032;
+    transform: scale(1.1); /* Slightly enlarge the button */
+    background: linear-gradient(135deg, #ff4d6d, #dc143c); /* Reverse gradient */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow */
 }
+
+/* Responsive Button */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem 1.5rem; /* Adjust padding for mobile */
+    }
+}
+
 
 /*Footer*/
 footer {
