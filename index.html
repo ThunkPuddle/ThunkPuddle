@@ -6,31 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="ThunkPuddle - A collaborative engineering workspace" />
     <title>ThunkPuddle</title>
-    <!-- Font: Roboto or other -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="scripts/main.js"></script>
 </head>
 
 <body id="top">
-    <!-- HEADER -->
     <header class="header">
         <div class="logo-container">
             <a href="#top">
                 <img src="images/Logo_idea_5.png" alt="ThunkPuddle Logo" class="logo" />
             </a>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
         <nav class="nav">
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Project</a></li>
-                <li><a href="#footer">Contact</a></li>
             </ul>
         </nav>
     </header>
+    
+    
 
     <section class="hero reveal" id="hero">
         <div class="hero-content container">
@@ -54,7 +55,7 @@
             <h3>Featured Project: Project Comet</h3>
             <p>Our first venture: a robotic arm that grasps objects and responds to voice commands. This project guides
                 how we structure our workspace, refine documentation, and streamline the platform.</p>
-            <button class="cta-button" onclick="location.href='https://github.com/YourOrg/YourProjectRepo'">Get
+            <button class="cta-button" onclick="location.href='https://github.com/ThunkPuddle/ThunkPuddle'">Get
                 Started</button>
         </div>
     </section>
