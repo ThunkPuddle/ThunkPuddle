@@ -80,8 +80,11 @@ a:hover {
 
 /* Header Navigation */
 .nav {
-    flex-grow: 1;
-    top: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -410,8 +413,10 @@ body:not(:root:root) .header.scrolled {
         display: none; /* Hidden by default */
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Position just below the header */
-        right: 10px; /* Align to the right near the hamburger menu */
+        transform: none;
+        top: 20%; /* Position just below the header */
+        left: auto;
+        right: 57px; /* Align to the right near the hamburger menu */
         width: 200px; /* Set a narrower width */
         background: rgba(0, 0, 0, 0.9);
         z-index: 1000;
