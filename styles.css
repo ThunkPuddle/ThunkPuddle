@@ -331,3 +331,152 @@ footer p {
 body:not(:root:root) .header.scrolled {
     background: rgba(0, 0, 0, 0.9);
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-toggle {
+        margin-left: auto;
+    }
+
+    .logo-container {
+        height: 100px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav a {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .hero {
+        padding: 11rem 1rem;
+        text-align: center;
+        min-height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about {
+        padding: 3rem 1rem;
+        margin-top: -150px; /* Adjust overlap */
+    }
+
+    .about h3 {
+        font-size: 1.4rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .project-highlight {
+        padding: 2rem 1rem;
+    }
+
+    .footer-social a {
+        font-size: 2rem; /* Reduce icon size */
+    }
+
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Hamburger Menu Button */
+.nav-toggle {
+    display: none; /* Hidden by default for larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Keeps it above other elements */
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.nav-toggle .hamburger::before {
+    top: -10px;
+}
+
+.nav-toggle .hamburger::after {
+    bottom: -10px;
+}
+
+/* Active state to morph into an "X" */
+.nav-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        padding: 1rem;
+    }
+
+    .nav.open {
+        display: flex; /* Show nav when the toggle is active */
+    }
+
+    .nav ul {
+        gap: 1rem; /* Adjust spacing for vertical layout */
+    }
+
+    .nav a {
+        font-size: 1.5rem; /* Larger text for better readability */
+    }
+}

@@ -45,3 +45,11 @@ backToTop.addEventListener('click', (e) => {
         behavior: 'smooth',
     });
 });
+
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active'); // Animate the hamburger
+    nav.classList.toggle('open');        // Show/hide the menu
+});
