@@ -1,0 +1,333 @@
+/* Base Reset */
+:root{
+    --font-family: 'IBM Plex Mono', monospace;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-turquoise: #40e0d0;
+    --color-crimson: #dc143c;
+    --color-light-crimson: #ff4d6d;
+    --color-gray: #ddd;
+    --color-subtle-gray: #aaa;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 0;
+    color: #EAEAEA;
+    background: #101010;
+    line-height: 1.7;
+    overflow: visible;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: #DC143C;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* General Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.5) 0%, rgba(0,0,0,1) 20%, rgba(0, 0, 0, 0) 100%);
+    transition: background 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 150px;
+    margin-right: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #DC143C;
+}
+
+/* Header Navigation */
+.nav {
+    flex-grow: 1;
+    top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex;
+    gap: 2rem; /* Add space between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: var(--color-crimson);
+    text-decoration: none; /* Remove underline */
+    font-size: 1.6rem; /* Increase font size for readability */
+    font-weight: 500; /* Slightly bold */
+    padding: 0.5rem 1rem; /* Add padding for a clickable area */
+    border-radius: 4px; /* Rounded corners for hover effect */
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.nav a:hover {
+    color: var(--color-turquoise); /* Change text color on hover */
+    background-color: rgba(0, 128, 128, 0.2); /* Subtle turquoise background */
+}
+
+.nav a.active {
+    color: var(--color-turquoise); /* Highlight active menu item */
+    font-weight: 700; /* Make it bold to stand out */
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    /* Allows :after to stack properly */
+    background: url('images/TP_mascot_alien_land2.png') no-repeat center center/cover;
+    padding: 10rem 2rem 6rem;
+    /* Add extra bottom padding to extend */
+    text-align: center;
+    min-height: 100vh;
+    /* Full viewport height for hero */
+    z-index: 1;
+    /* Base stacking context */
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Optional overlay for better text contrast */
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative; /* Ensure content is on top of the overlay */
+    z-index: 2; /* Higher stacking context than the overlay */
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #DC143C; /* Explicitly set text color to white */
+  }
+  
+  .hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    font-weight: bold;
+    margin: 0 auto;
+    color: #FFFFFF; /* Explicitly set text color to white */
+  }
+
+.hero:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* Extend the fade effect */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #101010 100%);
+    z-index: 2;
+}
+
+/* About Section */
+.about {
+    position: relative;
+    /* Default positioning for normal flow */
+    z-index: 3;
+    background: linear-gradient(to bottom,
+            rgba(16, 16, 16, 0) 0%,
+            /* Transparent at the top */
+            rgba(16, 16, 16, 0.8) 65%,
+            /* Semi-transparent midway */
+            #1F1F1F 100%
+            /* Fully solid at the bottom */
+        );
+    padding: 5rem 2rem;
+    margin-top: -220px;
+    /* Overlap with the hero section */
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #DC143C;
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    /* Reset padding to prevent unexpected spacing */
+}
+
+/* PROJECT SECTION */
+.project-highlight {
+    background: #1F1F1F;
+    position: relative;
+    padding: 1rem 1rem;
+}
+
+.project-highlight h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #DC143C;
+    text-align: center;
+}
+
+.project-highlight p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+.cta-button {
+    display: inline-block;
+    background: #DC143C;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #b61032;
+}
+
+/*Footer*/
+footer {
+    padding: 0rem 0;
+    background: var(--color-footer-gray);
+    text-align: center;
+    color: var(--color-crimson);
+    font-size: 1.4rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social a {
+    color: var(--color-crimson);
+    font-size: 3rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-social a:hover {
+    color: var(--color-turquoise);
+    transform: scale(1.2);
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--color-footer-gray);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* Increased size for better usability */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Ensures it doesn’t take up space */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1; /* Visible when .show class is added */
+    visibility: visible;
+}
+
+.back-to-top a {
+    color: var(--color-crimson);
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top a:hover {
+    color: var(--color-turquoise);
+    transform: translateY(-5px); /* Hover effect for interactivity */
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: If you’d like the header to become opaque after scrolling past hero */
+body:not(:root:root) .header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+}
