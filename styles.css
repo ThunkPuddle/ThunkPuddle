@@ -1,5 +1,5 @@
 /* Base Reset */
-:root{
+:root {
     --font-family: 'IBM Plex Mono', monospace;
     --color-black: #000;
     --color-white: #fff;
@@ -46,7 +46,9 @@ a:hover {
     padding: 2rem 0;
 }
 
-/* HEADER */
+/* ========================================== 
+   HEADER
+   =========================================== */
 .header {
     position: absolute;
     top: 0;
@@ -56,7 +58,7 @@ a:hover {
     justify-content: space-between;
     padding: 1rem 5%;
     z-index: 10;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.5) 0%, rgba(0,0,0,1) 20%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.5) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
     transition: background 0.3s ease;
 }
 
@@ -78,7 +80,8 @@ a:hover {
     color: #DC143C;
 }
 
-/* Header Navigation */
+/* =============================================
+   Header Navigation============================ */
 .nav {
     position: absolute;
     top: 50%;
@@ -91,46 +94,44 @@ a:hover {
 }
 
 .nav ul {
-    list-style: none; /* Remove default list styling */
+    list-style: none;
     display: flex;
-    gap: 2rem; /* Add space between menu items */
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
 
 .nav a {
     color: var(--color-crimson);
-    text-decoration: none; /* Remove underline */
-    font-size: 1.6rem; /* Increase font size for readability */
-    font-weight: bold; /* Slightly bold */
-    padding: 0.5rem 1rem; /* Add padding for a clickable area */
-    border-radius: 4px; /* Rounded corners for hover effect */
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     transition: color var(--transition-speed), background-color var(--transition-speed);
 }
 
 .nav a:hover {
-    color: var(--color-turquoise); /* Change text color on hover */
-    background-color: rgba(0, 128, 128, 0.2); /* Subtle turquoise background */
+    color: var(--color-turquoise);
+    background-color: rgba(0, 128, 128, 0.2);
 }
 
 .nav a.active {
-    color: var(--color-turquoise); /* Highlight active menu item */
-    font-weight: 700; /* Make it bold to stand out */
+    color: var(--color-turquoise);
+    font-weight: 700;
 }
 
 
-/* Hero Section */
+/* =====================================================
+   Hero Section
+   ===================================================== */
 .hero {
     position: relative;
-    /* Allows :after to stack properly */
     background: url('images/TP_mascot_alien_land2.png') no-repeat center center/cover;
     padding: 10rem 2rem 6rem;
-    /* Add extra bottom padding to extend */
     text-align: center;
     min-height: 100vh;
-    /* Full viewport height for hero */
     z-index: 1;
-    /* Base stacking context */
 }
 
 .hero:before {
@@ -141,29 +142,28 @@ a:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    /* Optional overlay for better text contrast */
     z-index: 2;
 }
 
 .hero-content {
-    position: relative; /* Ensure content is on top of the overlay */
-    z-index: 2; /* Higher stacking context than the overlay */
-  }
-  
-  .hero h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #DC143C; /* Explicitly set text color to white */
-  }
-  
-  .hero p {
+    color: #DC143C;
+}
+
+.hero p {
     font-size: 1.15rem;
     max-width: 600px;
     font-weight: bold;
     margin: 0 auto;
-    color: #FFFFFF; /* Explicitly set text color to white */
-  }
+    color: #FFFFFF;
+}
 
 .hero:after {
     content: "";
@@ -172,27 +172,23 @@ a:hover {
     left: 0;
     width: 100%;
     height: 200px;
-    /* Extend the fade effect */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #101010 100%);
     z-index: 2;
 }
 
-/* About Section */
+/* ========================================================
+   About Section
+   ======================================================== */
 .about {
     position: relative;
-    /* Default positioning for normal flow */
     z-index: 3;
     background: linear-gradient(to bottom,
             rgba(16, 16, 16, 0) 0%,
-            /* Transparent at the top */
             rgba(16, 16, 16, 0.8) 65%,
-            /* Semi-transparent midway */
             #1F1F1F 100%
-            /* Fully solid at the bottom */
         );
     padding: 5rem 2rem;
     margin-top: -220px;
-    /* Overlap with the hero section */
     text-align: center;
 }
 
@@ -206,17 +202,16 @@ a:hover {
     font-size: 1.1rem;
 }
 
-
-/* Container */
 .container {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0;
-    /* Reset padding to prevent unexpected spacing */
 }
 
-/* PROJECT SECTION */
+/* ==================================================
+   PROJECT SECTION
+   =================================================== */
 .project-highlight {
     background: #1F1F1F;
     position: relative;
@@ -236,40 +231,39 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-/* Center the Button */
 .cta-button {
-    display: inline-block;
-    margin: 2rem auto; /* Center the button horizontally with auto margins */
-    text-align: center; /* Align text inside the button */
-    background: linear-gradient(135deg, #dc143c, #ff4d6d); /* Add a gradient */
-    color: #fff; /* Button text color */
-    font-size: 1.5rem; /* Increase font size */
-    font-weight: bold; /* Make text bold */
-    padding: 1rem 2rem; /* Increase padding for better clickability */
-    border: none; /* Remove border */
-    border-radius: 50px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    transition: all 0.3s ease; /* Smooth hover effects */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 2rem auto;
+    text-align: center;
+    background: linear-gradient(135deg, #dc143c, #ff4d6d);
+    color: var(--color-turquoise);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* Hover Effect */
 .cta-button:hover {
-    transform: scale(1.1); /* Slightly enlarge the button */
-    background: linear-gradient(135deg, #ff4d6d, #dc143c); /* Reverse gradient */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff4d6d, #dc143c);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Button */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* //TODO:move to main media query section*/
     .cta-button {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-        padding: 0.8rem 1.5rem; /* Adjust padding for mobile */
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
     }
 }
 
 
-/*Footer*/
+/*==========================================================
+  Footer
+  ==========================================================*/
 footer {
     padding: 0rem 0;
     background: var(--color-footer-gray);
@@ -304,24 +298,26 @@ footer p {
     color: var(--color-footer-gray);
 }
 
-/* Back to Top Button */
+/* ======================================================
+    Back to Top Button
+    ===================================================== */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px; /* Increased size for better usability */
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    opacity: 0; /* Hidden by default */
-    visibility: hidden; /* Ensures it doesn’t take up space */
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .back-to-top.show {
-    opacity: 1; /* Visible when .show class is added */
+    opacity: 1;
     visibility: visible;
 }
 
@@ -333,10 +329,9 @@ footer p {
 
 .back-to-top a:hover {
     color: var(--color-turquoise);
-    transform: translateY(-5px); /* Hover effect for interactivity */
+    transform: translateY(-5px);
 }
 
-/* Reveal Animations */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -348,20 +343,21 @@ footer p {
     transform: translateY(0);
 }
 
-/* Optional: If you’d like the header to become opaque after scrolling past hero */
 body:not(:root:root) .header.scrolled {
     background: rgba(0, 0, 0, 0.9);
 }
 
 
-/* Hamburger Menu Button */
+/* ====================================================
+   Hamburger Menu Button
+   ==================================================== */
 .nav-toggle {
-    display: none; /* Hidden by default for larger screens */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; /* Keeps it above other elements */
+    z-index: 1001;/*Is there a better way to do this?*/
 }
 
 .nav-toggle .hamburger {
@@ -394,7 +390,6 @@ body:not(:root:root) .header.scrolled {
     bottom: -10px;
 }
 
-/* Active state to morph into an "X" */
 .nav-toggle.active .hamburger {
     background-color: transparent;
 }
@@ -408,7 +403,10 @@ body:not(:root:root) .header.scrolled {
 }
 
 
-/* Media Query for Mobile Devices */
+
+/*===================================================
+  MEDIA QUERY FORMATTING AND STYLING
+  ===================================================*/
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -428,22 +426,24 @@ body:not(:root:root) .header.scrolled {
     }
 
     .nav {
-        display: none; /* Hidden by default */
+        display: none;
+        /* Hidden by default */
         flex-direction: column;
         position: absolute;
         transform: none;
-        top: 20%; /* Position just below the header */
+        top: 20%;
         left: auto;
-        right: 57px; /* Align to the right near the hamburger menu */
-        width: 200px; /* Set a narrower width */
+        right: 57px; /*this is pain*/
+        width: 200px;
+        /* Set a narrower width */
         background: rgba(0, 0, 0, 0.9);
         z-index: 1000;
         padding: 1rem;
-        border-radius: 8px; /* Optional: Rounded corners for the dropdown */
+        border-radius: 8px;
     }
 
     .nav.open {
-        display: flex; /* Show nav when the toggle is active */
+        display: flex;
     }
 
     .nav ul {
@@ -459,11 +459,11 @@ body:not(:root:root) .header.scrolled {
     .hero {
         padding: 11rem 1rem;
         text-align: center;
-        min-height: 80vh; /* Adjust height for smaller screens */
+        min-height: 80vh;
     }
 
     .hero h2 {
-        font-size: 2rem; /* Reduce font size */
+        font-size: 2rem;
     }
 
     .hero p {
@@ -472,7 +472,7 @@ body:not(:root:root) .header.scrolled {
 
     .about {
         padding: 3rem 1rem;
-        margin-top: -150px; /* Adjust overlap */
+        margin-top: -150px;
     }
 
     .about h3 {
@@ -488,7 +488,7 @@ body:not(:root:root) .header.scrolled {
     }
 
     .footer-social a {
-        font-size: 2rem; /* Reduce icon size */
+        font-size: 2rem;
     }
 
     .back-to-top {
