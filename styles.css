@@ -457,7 +457,6 @@ body:not(:root:root) .header.scrolled {
     }
 
     .hero {
-        background-position: 47% center;
         padding: 11rem 1rem;
         text-align: center;
         min-height: 80vh; /* Adjust height for smaller screens */
