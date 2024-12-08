@@ -798,3 +798,64 @@ body:not(:root:root) .header.scrolled {
         height: 10px;
     }
 }
+
+
+/*   ================================================
+     Flow Chart section
+     ================================================*/
+/* Project Flow Charts Section */
+.project-flowcharts {
+    background: #1F1F1F; /* Match the timeline background */
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 2rem; /* Space above the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-flowcharts h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--color-crimson);
+}
+
+/* Flowchart Buttons */
+.flowchart-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Even spacing between buttons */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.flowchart-button {
+    background: linear-gradient(135deg, #40e0d0, #20b2aa);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flowchart-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #20b2aa, #40e0d0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flowchart-buttons {
+        flex-direction: column;
+        gap: 1.5rem; /* Increase spacing for vertical layout */
+    }
+
+    .flowchart-button {
+        width: 80%; /* Ensure buttons take up more space on small screens */
+        margin: 0 auto;
+    }
+}
+
+    
